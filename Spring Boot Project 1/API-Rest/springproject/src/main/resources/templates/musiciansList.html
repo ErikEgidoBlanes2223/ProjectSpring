@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Exhibitions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-4 display-4 font-weight-bold text-dark">Exhibitions List</h1>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="exhibition : ${exhibitions}">
+                    <td th:text="${exhibition.id}"></td>
+                    <td th:text="${exhibition.name}"></td>
+                    <td th:text="${exhibition.category}"></td>
+                    <td th:text="${exhibition.description}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
